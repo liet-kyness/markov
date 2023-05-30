@@ -1,13 +1,13 @@
 /** Command-line tool to generate Markov text. */
 
-const markov = require('./markov')
-const fs = require('fs')
-const process = require('process')
-const axios = require('axios')
+const MarkovMachine = require('./markov');
+const fs = require('fs');
+const process = require('process');
+const axios = require('axios');
 
 
 function generateText(text) {
-    let mm = new markov.MarkovMachine(text)
+    let mm = new MarkovMachine(text)
     console.log(mm.makeText());
 }
 
